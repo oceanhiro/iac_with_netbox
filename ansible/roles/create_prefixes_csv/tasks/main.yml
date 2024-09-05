@@ -1,0 +1,23 @@
+---
+- name: Read csv
+  read_csv:
+    path: roles/create_prefixes_csv/files/prefixes.csv
+  register: prefixes
+  delegate_to: localhost
+
+#- name: (debug) Print csv
+#  debug:
+#    var: prefixes.list
+
+#- name: (debug) Print prefixes.list
+#  debug:
+#    msg: "{{ item.prefix }}"
+#  loop: "{{ prefixes.list }}"
+
+- name: Create Prefixes within NetBox
+  netbox.netbox.netbox_prefix:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ item }}"
+    first_available: yes
+  loop: "{{ prefixes.list }}"

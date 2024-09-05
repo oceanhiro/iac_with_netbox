@@ -1,0 +1,22 @@
+---
+- name: Read csv
+  read_csv:
+    path: roles/create_ip_addresses_csv/files/ip_addresses.csv
+  register: ip_addresses
+  delegate_to: localhost
+
+#- name: (debug) Print csv
+#  debug:
+#    var: ip_addresses.list
+
+#- name: (debug) Print ip_addresses.list
+#  debug:
+#    msg: "{{ item }}"
+#  loop: "{{ ip_addresses.list }}"
+
+- name: Create Prefixes within NetBox
+  netbox.netbox.netbox_ip_address:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ item }}"
+  loop: "{{ ip_addresses.list }}"

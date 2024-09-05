@@ -5,3 +5,11 @@
 *.retry
 
 # End of https://www.toptal.com/developers/gitignore/api/ansible
+
+# venv
+pyvenv.cfg
+lib/
+lib64
+include/
+bin/
+.env

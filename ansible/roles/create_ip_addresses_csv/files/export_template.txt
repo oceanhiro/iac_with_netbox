@@ -1,0 +1,4 @@
+address,status,tenant,dns_name,description,comments
+{% for i in queryset -%}
+{{ i.address }},{{ i.status }},{{ i.tenant }},{{ i.dns_name }},{{ i.description }},{{ i.comments | replace('\n', ' ') | replace('\r', ' ') }}
+{% endfor -%}

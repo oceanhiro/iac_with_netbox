@@ -1,0 +1,10 @@
+---
+
+- name: Create Prefixes
+  connection: local
+  hosts: localhost
+  gather_facts: False
+
+  roles:
+    - role: create_prefixes_csv
+      tags: create_prefixes_csv

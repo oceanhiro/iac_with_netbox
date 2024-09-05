@@ -1,0 +1,9 @@
+prefix,status,tenant,site,prefix_role,description,comments
+10.1.0.0/16,reserved,AWS,ap-northeast-1,prd,TEST-VPC1,システム用VPC
+10.1.1.0/24,reserved,AWS,ap-northeast-1a,prd,TEST-VPC1-SUB1,システム用VPCサブネット1
+10.1.2.0/24,reserved,AWS,ap-northeast-1c,prd,TEST-VPC1-SUB2,システム用VPCサブネット1
+10.1.3.0/24,reserved,AWS,ap-northeast-1d,prd,TEST-VPC1-SUB3,システム用VPCサブネット1
+10.2.0.0/16,reserved,AWS,ap-northeast-1,prd,TEST-VPC2,DB用VPC
+10.2.1.0/24,reserved,AWS,ap-northeast-1a,prd,TEST-VPC2-SUB1,DB用VPCサブネット1
+10.2.2.0/24,reserved,AWS,ap-northeast-1c,prd,TEST-VPC2-SUB2,DB用VPCサブネット2
+10.2.3.0/24,reserved,AWS,ap-northeast-1d,prd,TEST-VPC2-SUB3,DB用VPCサブネット3

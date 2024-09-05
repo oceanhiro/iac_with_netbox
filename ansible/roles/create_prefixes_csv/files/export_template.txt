@@ -1,0 +1,4 @@
+prefix,status,tenant,site,prefix_role,description,comments
+{% for p in queryset -%}
+{{ p.prefix }},{{ p.status }},{{ p.tenant }},{{ p.site }},{{ p.role }},{{ p.description }},{{ p.comments | replace('\n', ' ') | replace('\r', ' ') }}
+{% endfor -%}
