@@ -4,9 +4,12 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.18"
     }
-  }
 
-  required_version = ">= 1.2.0"
+    netbox = {
+      source  = "e-breuninger/netbox"
+      version = "~> 3.9.0"
+    }
+  }
 
   backend "s3" {
     bucket          = "20240906-iac-with-netbox"
@@ -22,3 +25,7 @@ provider "aws" {
   profile = "default"
 }
  
+ provider "netbox" {
+  server_url = var.netbox_server_url
+  api_token  = var.netbox_api_token
+}

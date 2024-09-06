@@ -1,6 +1,22 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
+provider "registry.terraform.io/e-breuninger/netbox" {
+  version     = "3.9.1"
+  constraints = "~> 3.9.0"
+  hashes = [
+    "h1:P2E0fPN/8DPucBjdxLHplYeAwCSy3eNjOQKXsAI8YqU=",
+    "zh:17f75d78bd80cbaab1e532ee22e3b825ce51d5667833dee2ce8de077a71e4dd2",
+    "zh:1eaeec4f867329ef66d87b0769415715a1e95f8a763e43df790fdea4a393fc66",
+    "zh:8afe760512685a7135f04d1f7d990b6ab6cfbb716461773c0d9874be0be7c2cd",
+    "zh:dcb775dad3913ab758d1d8b1292bae852f583b8cdf14532aeb9248de9fe012a7",
+    "zh:e0b0fb663b8a3de4be550f43457ef257baca95a93dbad16c9a1906a89e14311e",
+    "zh:e15932f13b46051a41ecdec7cdde21b58e8e7cd03d8963f3bb1d058e0bdbb390",
+    "zh:eb19f0902b39ded397061a5f6fa0b8227d81587583b3c022cceb59f05f4a70c8",
+    "zh:f52110fa02dd023a4c5723bdb0e67160104c65946cd654e093ece58c602b3783",
+  ]
+}
+
 provider "registry.terraform.io/hashicorp/aws" {
   version     = "5.66.0"
   constraints = "~> 5.18"
