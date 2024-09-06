@@ -10,7 +10,7 @@ terraform {
 
   backend "s3" {
     bucket          = "{{__edit-here__}}"
-    dynamodb_table  = "terraform_state_lock"
+    dynamodb_table  = "terraform-state-lock"
     key             = "dev/terraform.tfstate"
     region          = "ap-northeast-1"
     profile         = "default"
