@@ -9,9 +9,8 @@ terraform {
 }
 
 provider "aws" {
-  region                   = "ap-northeast-1"
-  #shared_credentials_files = ["$HOME/.aws/credentials"]
-  profile                  = "default"
+  region  = "ap-northeast-1"
+  profile = "default"
 }
 
 module "backend" {

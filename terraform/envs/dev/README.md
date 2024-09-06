@@ -1,12 +1,10 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.18"
-    }
-  }
+# edit bucket name
 
-  required_version = ">= 1.2.0"
+```
+(ansible) [vagrant@client-1 dev]$ cat main.tf
+terraform {
+
+  ~~snip~~
 
   backend "s3" {
     bucket          = "{{__edit-here__}}"
@@ -15,10 +13,16 @@ terraform {
     region          = "ap-northeast-1"
     profile         = "default"
   }
-}
 
-provider "aws" {
-  region  = "ap-northeast-1"
-  profile = "default"
+  ~~snip~~
+
 }
- 
+```
+
+# set up terraform
+
+```
+terraform init
+terraform plan
+terraform apply
+```
