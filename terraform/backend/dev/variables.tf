@@ -1,6 +1,6 @@
 variable "bucket_name" {
   type    = string
-  default = "{{__edit-here__}}"
+  default = "20240906-iac-with-netbox"
 }
 variable "dynamoDB_name" {
   type    = string
