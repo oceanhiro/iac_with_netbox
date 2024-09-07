@@ -1,9 +1,9 @@
-variable vpc-name {
+variable vpc_name {
   type        = string
-  default     = "vpc-name"
+  default     = "vpc_name"
 }
 
-variable vpc-cidr {
+variable vpc_cidr {
   type        = string
   default     = "10.1.0.0/16"
 }
