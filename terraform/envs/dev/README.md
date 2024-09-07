@@ -26,3 +26,21 @@ terraform init
 terraform plan
 terraform apply
 ```
+
+# sample
+* netbox cidr data
+```
+  + test-value = [
+      + {
+          + description = "TEST-VPC1"
+          + id          = 1
+          + prefix      = "10.1.0.0/16"
+          + site_id     = 4
+          + status      = "reserved"
+          + tags        = []
+          + vlan_id     = 0
+          + vlan_vid    = 0
+          + vrf_id      = 0
+        },
+    ]
+```
