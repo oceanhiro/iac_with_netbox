@@ -12,11 +12,11 @@ terraform {
   }
 
   backend "s3" {
-    bucket          = "20240906-iac-with-netbox"
-    dynamodb_table  = "terraform-state-lock"
-    key             = "dev/terraform.tfstate"
-    region          = "ap-northeast-1"
-    profile         = "default"
+    bucket         = "20240906-iac-with-netbox"
+    dynamodb_table = "terraform-state-lock"
+    key            = "dev/terraform.tfstate"
+    region         = "ap-northeast-1"
+    profile        = "default"
   }
 }
 
@@ -24,8 +24,8 @@ provider "aws" {
   region  = "ap-northeast-1"
   profile = "default"
 }
- 
- provider "netbox" {
+
+provider "netbox" {
   server_url = var.netbox_server_url
   api_token  = var.netbox_api_token
 }
