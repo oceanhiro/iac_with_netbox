@@ -127,3 +127,22 @@ terraform apply
     }
 
 ```
+
+* netbox site data
+```
+  site_all_attributes = {
+      asn_ids     = []
+      comments    = ""
+      description = ""
+      facility    = ""
+      group_id    = null
+      id          = "1"
+      name        = "ap-northeast-1a"
+      region_id   = null
+      site_id     = 1
+      slug        = "ap-northeast-1a"
+      status      = "active"
+      tenant_id   = null
+      time_zone   = ""
+    }
+```
