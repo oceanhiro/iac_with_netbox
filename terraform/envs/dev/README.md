@@ -27,6 +27,13 @@ terraform plan
 terraform apply
 ```
 
+# export tf env
+
+```
+export TF_VAR_netbox_api_token="{{__YOUR_API_TOKEN__}}"
+export TF_VAR_netbox_server_url="{{__YOUR_NETBOX_URL__}}"
+```
+
 # sample
 * netbox netbox_prefixes data
 ```
