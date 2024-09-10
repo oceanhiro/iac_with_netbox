@@ -153,3 +153,53 @@ export TF_VAR_netbox_server_url="{{__YOUR_NETBOX_URL__}}"
       time_zone   = ""
     }
 ```
+
+* netbox netbox_virtual_machines data
+```
+  base_vm_all_attributes = {
+      filter     = [
+          {
+              name  = "cluster_id"
+              value = "1"
+            },
+        ]
+      id         = "terraform-20240910151432187100000002"
+      limit      = null
+      name_regex = "test-vpc1-sub1-vm1"
+      vms        = [
+          {
+              cluster_id         = 1
+              comments           = "test aws vm comments"
+              config_context     = jsonencode(
+                    {
+                      instance_type = "t2.micro"
+                    }
+                )
+              custom_fields      = {}
+              description        = "test aws vm"
+              device_id          = 0
+              device_name        = ""
+              disk_size_gb       = 8
+              local_context_data = jsonencode(
+                    {
+                      instance_type = "t2.micro"
+                    }
+                )
+              memory_mb          = 8
+              name               = "test-vpc1-sub1-vm1"
+              platform_id        = 1
+              platform_slug      = "amazon-linux-2-ami-2-0-20230404-1-x86_64-hvm-gp2"
+              primary_ip         = "10.1.1.1/24"
+              primary_ip4        = "10.1.1.1/24"
+              primary_ip6        = ""
+              role_id            = 0
+              site_id            = 1
+              status             = "active"
+              tag_ids            = []
+              tenant_id          = 1
+              vcpus              = 4
+              vm_id              = 1
+            },
+        ]
+    }
+```
